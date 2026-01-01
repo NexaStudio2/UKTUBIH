@@ -1,0 +1,192 @@
+/* Definisanje boja i fontova */
+:root {
+    --primary-blue: #004a99; /* Tamnoplava kao na zastavi */
+    --accent-yellow: #ffcc00; /* Žuta kao na zastavi */
+    --white: #ffffff;
+    --dark-bg: #111111;
+    --light-bg: #f4f4f4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigacija */
+.navbar {
+    background: var(--white);
+    height: 70px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #222;
+}
+
+.logo b {
+    color: var(--primary-blue);
+    font-weight: 800;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: var(--primary-blue);
+}
+
+/* Hero Sekcija (Naslovna Slika) */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 100px 20px;
+    /* Slika se prilagođava ekranu */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+.hero h1 {
+    font-size: clamp(1.8rem, 5vw, 3.5rem);
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: var(--accent-yellow);
+}
+
+.hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+/* Dugmad */
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-primary {
+    background: var(--accent-yellow);
+    color: #222;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
+    background: var(--white);
+}
+
+/* O Nama Sekcija */
+.about {
+    padding: 80px 0;
+    background: var(--white);
+    text-align: center;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+}
+
+.underline {
+    width: 50px;
+    height: 4px;
+    background: var(--accent-yellow);
+    margin: 10px auto 30px;
+}
+
+.about-content p {
+    max-width: 800px;
+    margin: 0 auto 20px;
+    font-size: 1.1rem;
+}
+
+/* Popravka za tvoj Logo u "O nama" */
+.about-content img {
+    max-width: 280px; /* Ovdje ograničavamo veličinu tvog loga */
+    height: auto;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+/* Footer (Kontakt) */
+footer {
+    background: var(--primary-blue);
+    color: var(--white);
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer h3 {
+    margin-bottom: 20px;
+    color: var(--accent-yellow);
+}
+
+.social-icons a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px);
+    display: inline-block;
+}
+
+/* Responzivnost za mobilne telefone */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Sakriva meni na mobitelu radi preglednosti */
+    }
+    
+    .hero {
+        padding: 60px 20px;
+    }
+}
